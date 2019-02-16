@@ -1,4 +1,4 @@
-# Blog
+# Note Book
 #### 13 February 2019
 #### By **Kironji Kevin**
 
@@ -55,5 +55,5 @@ No known bugs as at the completion of the project.
 Feel free to reach me at karonjekevin67@gmail.com
 
 ### License
-The project is under the [MIT](#) licence
+The project is under the [MIT](https://github.com/Fahari/Blog/blob/master/LICENSE) licence
 Copyright (c) 2019 **Kironji Kevin**
