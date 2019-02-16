@@ -2,11 +2,10 @@
 #### 13 February 2019
 #### By **Kironji Kevin**
 
-### Description
-```
+## Description
+
 Note book is a personal blogging web application that gives a writer an ability to create a blog out of it and share his/her opinions. Other users can read and comment on the blogs content. The web application is simply designed to ease users experience and to get the most out of the application.
 
-```
 ### User Stories
 ```
 1. As a user, I would like to view the blog posts on the site
@@ -30,16 +29,9 @@ Note book is a personal blogging web application that gives a writer an ability 
 5. Heroku for deployment
 
 ```
-<<<<<<< HEAD
-=======
-
 ## Application link
 click [here](#)
->>>>>>> e37b3b4dc85a1fb962268fca13297c6db0555470
 
-## Application link
-`click [here](#)
-`
 ## Set up and Installation
 
 To access this application on your command line, you need to clone it.
@@ -66,7 +58,7 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 No known bugs as at the completion of the project.
 
 ## Support and contact details
-Feel free to reach me at `karonjekevin67@gmail.com`
+Feel free to reach me at karonjekevin67@gmail.com
 
 ### License
 The project is under the [MIT](https://github.com/Fahari/Blog/blob/master/LICENSE) licence
