@@ -50,6 +50,7 @@ $ pip install flask
 
 #postgres
 $ sudo apt-get install postgresql postgresql-contrib libpq-dev
+
 ```
 ## Known bugs
 No known bugs as at the completion of the project.
