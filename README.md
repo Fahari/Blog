@@ -30,6 +30,12 @@ Note book is a personal blogging web application that gives a writer an ability 
 5. Heroku for deployment
 
 ```
+<<<<<<< HEAD
+=======
+
+## Application link
+click [here](#)
+>>>>>>> e37b3b4dc85a1fb962268fca13297c6db0555470
 
 ## Application link
 `click [here](#)
