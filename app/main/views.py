@@ -1,13 +1,13 @@
-from flask import render_template
+from flask import render_template,redirect,url_for
 from . import main
 from .forms import PostForm,SubscribeForm
 from flask_login import login_required,current_user
-from ..models import Post,User
+from ..models import Post,User,Subscriber
 from datetime import datetime
 
 
 # Views
-@main.route('/')
+@main.route('/',methods= ['POST', 'GET'])
 # @login_required
 def index():
 
