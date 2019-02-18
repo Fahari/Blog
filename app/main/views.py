@@ -4,6 +4,7 @@ from .forms import PostForm,SubscribeForm
 from flask_login import login_required,current_user
 from ..models import Post,User,Subscriber
 from datetime import datetime
+from .. import db
 
 
 # Views
