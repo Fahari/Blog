@@ -1,1 +1,1 @@
-SECRET_KEY = 'safezone'
+SECRET_KEY = 'safezone1'
