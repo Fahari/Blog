@@ -7,6 +7,7 @@ class Config:
     pass
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgres+psycopg2://postgres:psql@localhost/notebook'
+    API_BASE_URL='http://quotes.stormconsultancy.co.uk/random.json'
 
 
 class ProdConfig(Config):
