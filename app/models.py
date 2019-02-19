@@ -48,6 +48,19 @@ class Post(db.Model):
         db.session.add(self)
         db.session.commit()
 
+class Comment(db.Model):
+    __tablename__ = "comments"
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String)
+    title = db.Column(db.String)
+    content = db.Column(db.String)
+    post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
+    time = db.Column(db.String)
+
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+
 class Subscriber(db.Model):
     __tablename__ = "subscribers"
     id = db.Column(db.Integer, primary_key = True)
