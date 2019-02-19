@@ -17,7 +17,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-     SQLALCHEMY_DATABASE_URI= os.environ.get('DATABASE_URI')
+     SQLALCHEMY_DATABASE_URI= os.environ.get('HEROKU_POSTGRESQL_BROWN_URL')
 
 __    pass
 
