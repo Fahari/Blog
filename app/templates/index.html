@@ -2,12 +2,17 @@
 {% import "bootstrap/wtf.html" as wtf%}
 
 {% block content%}
-<div>
-  <p> {{display.quote}} </p>
+<div class="jumbotron">
+  <div>
+    <p> {{display.quote}} </p>
+  </div>
+  <div>
+    <p> {{display.author}} </p>
+  </div>
+
 </div>
-<div>
-  <p> {{display.author}} </p>
-</div>
+
+
 <div class="home">
   <h1 class="title text-center display-4">Articles</h1>
   <div class="row">
@@ -35,6 +40,6 @@
 <footer>
   <div class="col-sm-2" style="overflow-y: hidden; margin-top: 5px">
     {{wtf.quick_form(form)}}
-</div>
+  </div>
 </footer>
 {% endblock %}

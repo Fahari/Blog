@@ -1,4 +1,4 @@
-from flask import render_template,redirect,url_for
+from flask import render_template,redirect,url_for,abort
 from . import main
 from .forms import PostForm,SubscribeForm,AddComment
 from flask_login import login_required,current_user
@@ -67,6 +67,9 @@ def profile(id):
     user = User.query.filter_by(id = id).first()
     posts = Post.query.filter_by(user_id = user.id).order_by(Post.time.desc())
     title = user.username
+
+    if user is None:
+        abort(404)
     return render_template("profile/profile.html", user = user,posts = posts, title = title)
 
 # @main.route("/comments/<int:id>",methods = ["GET","POST"])

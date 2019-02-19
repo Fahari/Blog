@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block styles%}
+    {{super()}}
+    <link rel="stylesheet" href="../static/css/styles.css">
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1>{{current_user.name | upper}}</h1>
@@ -10,12 +15,8 @@
                 <img src="{{url_for('static', filename = user.image)}}" class="img-thumbnail profile-pic">
             </div>
             {% else %}
-            <p>{{user.username}} has not upoloaded an image</p>
+            <p>{{user.username}} has not uploaded an image or written any article</p>
             {% endif %}
-        </div>
-        <div class="col-sm-12 col-md-5 col-lg-5">
-            <p>Aboout Me: {{current_user.bio}}</p>
-            <a href="{{url_for('main.update_profile',user_id = current_user.id)}}"><button class="btn bio-btn">Edit Profile</button></a>
         </div>
     </div>
     <hr>
