@@ -5,7 +5,8 @@ from flask_login import login_required,current_user
 from ..models import Post,User,Subscriber
 from datetime import datetime
 from .. import db
-
+import requests
+import json
 
 
 # Views
@@ -26,9 +27,11 @@ def index():
         return redirect(url_for("main.index"))
     post = Post.query.order_by(Post.time.desc())
 
+    display=requests.get('http://quotes.stormconsultancy.co.uk/random.json').json()
+    print(display)
     message='Hello variable block test'
     title = 'Note Book'
-    return render_template("index.html",post = post,form = form,title = title)
+    return render_template("index.html",post = post,form = form,title = title,display=display)
 
 @main.route("/add/post/",methods = ["GET","POST"])
 @login_required
