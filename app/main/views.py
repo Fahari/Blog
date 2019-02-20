@@ -2,7 +2,7 @@ from flask import render_template,redirect,url_for,abort
 from . import main
 from .forms import PostForm,SubscribeForm,AddComment
 from flask_login import login_required,current_user
-from ..models import Post,User,Subscriber
+from ..models import Post,User,Subscriber,Comment
 from datetime import datetime
 from .. import db
 import requests
@@ -72,14 +72,15 @@ def profile(id):
         abort(404)
     return render_template("profile/profile.html", user = user,posts = posts, title = title)
 
-# @main.route("/comments/<int:id>",methods = ["GET","POST"])
-# def add_comment(id):
-#     form = AddComment()
-#     if form.validate_on_submit():
-#         name = form.name.data
-#         content = form.comment.data
-#         new_comment = Comment(name = name, content = content)
-#         new_comment.save_comment()
-#         return redirect(url_for('main.index')
-#     comments = Comment.query.all
-#     return render_template("post.html", title = title,form = form,comments = comments)
+@main.route("/comments/<int:id>",methods = ["GET","POST"])
+def add_comment(id):
+    form = AddComment()
+    if form.validate_on_submit():
+        name = form.name.data
+        content = form.comment.data
+        new_comment = Comment(name = name, content = content)
+        new_comment.save_comment()
+        return redirect(url_for('main.index'))
+    comments = Comment.query.all()
+
+    return render_template("comments.html",form = form,comments = comments)

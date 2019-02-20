@@ -2,3 +2,9 @@
   padding: 0;
   margin: 0;
 }
+nav,
+ .card {
+   -webkit-box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.1);
+   box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.1);
+   transition: all 0.5s;
+   -webkit-transition: all 0.5s;
