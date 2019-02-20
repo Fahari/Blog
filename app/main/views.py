@@ -84,3 +84,10 @@ def add_comment(id):
     comments = Comment.query.all()
 
     return render_template("comments.html",form = form,comments = comments)
+
+@main.route("/delete/comment/<id>")
+def delete_comment(id):
+    comment = Comment.query.all()
+    db.session.delete(comment)
+    db.session.commit()
+    return redirect(url_for("main.comments"))
